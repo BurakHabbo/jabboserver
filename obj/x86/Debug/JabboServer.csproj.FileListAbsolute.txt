@@ -1,0 +1,22 @@
+C:\Users\Jos\AppData\Local\Temporary Projects\JabboServer\bin\Debug\JabboServer.exe
+C:\Users\Jos\AppData\Local\Temporary Projects\JabboServer\bin\Debug\JabboServer.pdb
+C:\Users\Jos\AppData\Local\Temporary Projects\JabboServer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jos\AppData\Local\Temporary Projects\JabboServer\obj\x86\Debug\JabboServer.exe
+C:\Users\Jos\AppData\Local\Temporary Projects\JabboServer\obj\x86\Debug\JabboServer.pdb
+C:\Users\Jos\documents\visual studio 2010\Projects\JabboServer\JabboServer\obj\x86\Debug\JabboServer.exe
+C:\Users\Jos\documents\visual studio 2010\Projects\JabboServer\JabboServer\obj\x86\Debug\JabboServer.pdb
+D:\C#Project\JabboServer\JabboServer\obj\x86\Debug\JabboServer.exe
+D:\C#Project\JabboServer\JabboServer\obj\x86\Debug\JabboServer.pdb
+D:\JabboServer\obj\x86\Debug\JabboServer.exe
+D:\JabboServer\obj\x86\Debug\JabboServer.pdb
+D:\JabboServer\bin\Debug\JabboServer.exe
+D:\JabboServer\bin\Debug\JabboServer.pdb
+D:\JabboServer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jos\Downloads\JabboServer (2)\JabboServer\obj\x86\Debug\JabboServer.exe
+C:\Users\Jos\Downloads\JabboServer (2)\JabboServer\obj\x86\Debug\JabboServer.pdb
+C:\Users\Jos\Downloads\JabboServer (2)\JabboServer\bin\Debug\JabboServer.exe
+C:\Users\Jos\Downloads\JabboServer (2)\JabboServer\bin\Debug\JabboServer.pdb
+C:\Users\Jos\Downloads\JabboServer (2)\JabboServer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\JabboServer\bin\Debug\Logs\chatlog.txt
+D:\JabboServer\bin\Debug\Logs\errorlog.txt
+D:\JabboServer\bin\Debug\Config\config.ini
