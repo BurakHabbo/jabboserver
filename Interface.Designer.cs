@@ -128,7 +128,7 @@
             this.MaximizeBox = false;
             this.Name = "Interface";
             this.Opacity = 0.9D;
-            this.Text = "JabboServer [C#] Users Online: 0, Rooms loaded: 0";
+            this.Text = "JabboServer [C#] - Users online: 0 - Rooms loaded: 0";
             this.Load += new System.EventHandler(this.Interface_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
