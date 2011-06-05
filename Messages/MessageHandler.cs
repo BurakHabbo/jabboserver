@@ -123,7 +123,7 @@ namespace JabboServer.Messages
 
             if (Connection.User.InRoom)
             {
-                Connection.User.Room.LeaveRoom(Connection.User);
+                Connection.User.GetRoom().LeaveRoom(Connection.User);
                 Helpers.WriteLine("[" + Connection.GetUserId() + "] - LeaveOldRoom()");
             }
 
@@ -138,14 +138,14 @@ namespace JabboServer.Messages
         {
             if (Connection.User.InRoom)
             {
-                Connection.User.Room.LeaveRoom(Connection.User);
+                Connection.User.GetRoom().LeaveRoom(Connection.User);
                 Helpers.WriteLine("[" + Connection.GetUserId() + "] - LeaveRoom()");
             }
         }
 
         internal void RequestUsers()
         {
-            Room Room = Connection.User.Room;
+            Room Room = Connection.User.GetRoom();
 
             if (Room == null)
             {
@@ -154,7 +154,7 @@ namespace JabboServer.Messages
 
             foreach (User User in Room.Users)
             {
-                if (User != Connection.User && User.Room.Id == Room.Id)
+                if (User != Connection.User && User.GetRoom().Id == Room.Id)
                 {
                     Connection.SendResponse(User.Serialize());
                 }
