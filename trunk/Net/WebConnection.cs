@@ -79,12 +79,17 @@ namespace JabboServer.Net
 
         internal void Receive()
         {
+            if (!IsAlive || Sock == null || !Sock.Connected)
+            {
+                return;
+            }
+            
             SyncState = Sock.BeginReceive(Buffer, 0, Buffer.Length, SocketFlags.None, Async, SyncState).AsyncState;
         }
 
         internal void Received(IAsyncResult Result)
         {
-            if (!IsAlive || Result == null || Sock == null)
+            if (!IsAlive || Result == null || Sock == null || !Sock.Connected)
             {
                 return;
             }
@@ -176,9 +181,12 @@ namespace JabboServer.Net
                 return;
             }
 
-            if (User.InRoom)
+            if (User != null)
             {
-                User.Room.LeaveRoom(User);
+                if (User.InRoom)
+                {
+                    User.Room.LeaveRoom(User);
+                }
             }
 
             Helpers.WriteLine("Disposed connection: " + EndPoint);
