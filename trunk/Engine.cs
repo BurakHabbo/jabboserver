@@ -16,6 +16,7 @@ namespace JabboServer
 {
     internal class Engine
     {
+        private static Interface Interface;
         private static Config Config;
 
         private static WebSocket WebSocket;
@@ -23,12 +24,14 @@ namespace JabboServer
         private static RoomManager RoomManager;
         private static string WelcomeMessage = "";
 
-        internal static void Initialize()
+        internal static void Initialize(Interface i)
         {
+            Interface = i;
+
             Helpers.WriteLine("Credits to:", false);
             Helpers.WriteLine("- PEjump2 for coding the base.", false);
             Helpers.WriteLine("- joopie for coding the base of the Packet structure.", false);
-            Helpers.WriteLine("- TopErwin with helping to fix exploits and coding some functions.", false);
+            Helpers.WriteLine("- TopErwin with helping to fix exploits.", false);
             Helpers.WriteLine("- wichard for recoding the whole JabboServer.", false);
             Helpers.WriteLine(Environment.NewLine, false);
 
@@ -50,7 +53,7 @@ namespace JabboServer
 
         internal static void UpdateTitle()
         {
-            Console.Title = GetConsoleTitle;
+            //Console.Title = GetConsoleTitle;
         }
 
         internal static void Dispose()
@@ -113,6 +116,11 @@ namespace JabboServer
         internal static RoomManager GetRoomManager()
         {
             return RoomManager;
+        }
+
+        internal static Interface GetInterface()
+        {
+            return Interface;
         }
     }
 }

@@ -8,51 +8,30 @@ namespace JabboServer.Core
 {
     internal class Helpers
     {
-        internal static object LogLock;
-
         internal static void WriteLine(string Msg)
         {
             DateTime Time = DateTime.Now;
-            LogLock = new Object();
-
-            lock (LogLock)
-            {
-                Console.WriteLine(Time.ToShortDateString() + " " + Time.ToLongTimeString() + " => " + Msg);
-            }
-
-            GC.SuppressFinalize(LogLock);
+            
+            Engine.GetInterface().WriteLine(Time.ToShortDateString() + " " + Time.ToLongTimeString() + " => " + Msg);
         }
 
         internal static void WriteLine(string Msg, bool EnableTime)
         {
             DateTime Time = DateTime.Now;
-            LogLock = new Object();
 
-            lock (LogLock)
+            if (EnableTime)
             {
-                if (EnableTime)
-                {
-                    Console.WriteLine(Time.ToShortDateString() + " " + Time.ToLongTimeString() + " => " + Msg);
-                }
-                else
-                {
-                    Console.WriteLine(Msg);
-                }
+                Engine.GetInterface().WriteLine(Time.ToShortDateString() + " " + Time.ToLongTimeString() + " => " + Msg);
             }
-
-            GC.SuppressFinalize(LogLock);
+            else
+            {
+                Engine.GetInterface().WriteLine(Msg);
+            }
         }
 
         internal static void Clear()
         {
-            LogLock = new Object();
-
-            lock (LogLock)
-            {
-                Console.Clear();
-            }
-
-            GC.SuppressFinalize(LogLock);
+            Engine.GetInterface().Clear();
         }
 
         internal static string Filter(string Msg)

@@ -189,7 +189,7 @@ namespace JabboServer.Net
                 }
             }
 
-            Helpers.WriteLine("Disposed connection: " + EndPoint);
+            Helpers.WriteLine("Disconnection: " + EndPoint);
 
             Async = null;
             SyncState = null;
