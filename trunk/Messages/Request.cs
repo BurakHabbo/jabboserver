@@ -65,17 +65,20 @@ namespace JabboServer.Messages
 
         internal string PopString()
         {
-            return Convert.ToString(PopObject());
+            try { return Convert.ToString(PopObject()); }
+            catch (FormatException) { return null; }
         }
 
         internal uint PopUInt32()
         {
-            return Convert.ToUInt32(PopObject());
+            try { return Convert.ToUInt32(PopObject()); }
+            catch (FormatException) { return 0; }
         }
 
         internal int PopInt32()
         {
-            return Convert.ToInt32(PopObject());
+            try { return Convert.ToInt32(PopObject()); }
+            catch (FormatException) { return 0; }
         }
 
         internal bool PopBoolean()
