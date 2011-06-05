@@ -66,7 +66,7 @@ namespace JabboServer.Net
 
             WebSock.Listen(Backlog);
 
-            Helpers.WriteLine("WebSocket listening on: " + WebSock.LocalEndPoint);
+            Helpers.WriteLine("WebSocket listening on: " + PORT);
         }
 
         internal void Dispose()
@@ -104,7 +104,7 @@ namespace JabboServer.Net
             {
                 if (ConnectionFactory.HandleNewConnection(GainedSocket))
                 {
-                    Helpers.WriteLine("Accepted new connection: " + GainedSocket.RemoteEndPoint);
+                    Helpers.WriteLine("Connection: " + GainedSocket.RemoteEndPoint);
                 }
             }
 
