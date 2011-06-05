@@ -92,7 +92,7 @@ namespace JabboServer.Net
 
         internal void Received(IAsyncResult Result)
         {
-            if (!IsAlive)
+            if (!IsAlive || Result == null)
             {
                 Helpers.WriteLine("Warning! WebSocket died, he will not accept anymore!");
                 return;
