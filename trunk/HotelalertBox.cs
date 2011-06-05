@@ -20,7 +20,14 @@ namespace JabboServer
         {
             if (inputBox.Text.Length > 0)
             {
-                Engine.GetWebSocket().GetFactory().BroadcastHotelAlert(inputBox.Text);
+                if (Engine.GetWebSocket().ConnectionCount > 0)
+                {
+                    Engine.GetWebSocket().GetFactory().BroadcastHotelAlert(inputBox.Text);
+                }
+                else
+                {
+                    MessageBox.Show("No users connected at the moment..", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

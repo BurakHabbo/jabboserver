@@ -13,7 +13,7 @@ namespace JabboServer
     {
         private bool IsStarted = false;
 
-        private delegate void textLogger(string Text); // <<
+        private delegate void textLogger(string Text);
 
         internal Interface()
         {
@@ -53,6 +53,11 @@ namespace JabboServer
             this.logBox.Clear();
         }
 
+        public void SetTitle(string Title)
+        {
+            this.Text = Title;
+        }
+
         private void startButton_Click(object sender, EventArgs e)
         {
             if (!IsStarted)
@@ -67,6 +72,20 @@ namespace JabboServer
             {
                 Engine.Dispose();
             }
+        }
+
+        private void startButton_MouseHover(object sender, EventArgs e)
+        {
+            Image pic = (Image)JabboServer.Properties.Resources.startButton_hover;
+
+            this.startButton.BackgroundImage = (Image)pic;
+        }
+
+        private void startButton_MouseLeave(object sender, EventArgs e)
+        {
+            Image pic = (Image)JabboServer.Properties.Resources.startButton_default;
+
+            this.startButton.BackgroundImage = (Image)pic;
         }
 
         private void informationButton_Click(object sender, EventArgs e)
