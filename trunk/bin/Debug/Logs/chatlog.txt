@@ -1,0 +1,14 @@
+﻿System.NullReferenceException: Object reference not set to an instance of an object.
+   at JabboServer.Net.WebConnection.Dispose() in D:\JabboServer\Net\WebConnection.cs:line 176
+   at JabboServer.Net.WebConnection.Received(IAsyncResult Result) in D:\JabboServer\Net\WebConnection.cs:line 106
+   at System.Net.LazyAsyncResult.Complete(IntPtr userToken)
+   at System.Net.ContextAwareResult.CompleteCallback(Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.ContextAwareResult.Complete(IntPtr userToken)
+   at System.Net.LazyAsyncResult.ProtectedInvokeCallback(Object result, IntPtr userToken)
+   at System.Net.Sockets.BaseOverlappedAsyncResult.CompletionPortCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pOVERLAP)
+[5-6-2011 12:04] PEjump says: lalalala
+[5-6-2011 12:05] Quackie says: lkasdhjsjsd
+
