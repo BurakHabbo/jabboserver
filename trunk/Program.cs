@@ -36,7 +36,7 @@ namespace JabboServer
         {
             string Error = args.ExceptionObject.ToString();
 
-            Helpers.LogToFile("Logs\\chatlog.txt", Error);
+            Helpers.LogToFile("Logs\\errorlog.txt", Error);
             Helpers.WriteLine(Error);
 
             Console.ReadKey(true);
