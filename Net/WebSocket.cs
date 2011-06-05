@@ -180,10 +180,12 @@ namespace JabboServer.Net
 
         internal void BroadcastHotelAlert(string Alert)
         {
+            string FixedAlert = Helpers.Filter(Alert);
+
             Response Response = new Response();
 
             Response.Init("hotelAlert");
-            Response.AppendObject(Alert);
+            Response.AppendObject(FixedAlert);
 
             foreach (WebConnection Connection in Connections.Values.ToList())
             {

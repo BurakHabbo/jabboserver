@@ -23,6 +23,26 @@ namespace JabboServer.Core
             GC.SuppressFinalize(LogLock);
         }
 
+        internal static void WriteLine(string Msg, bool EnableTime)
+        {
+            DateTime Time = DateTime.Now;
+            LogLock = new Object();
+
+            lock (LogLock)
+            {
+                if (EnableTime)
+                {
+                    Console.WriteLine(Time.ToShortDateString() + " " + Time.ToLongTimeString() + " => " + Msg);
+                }
+                else
+                {
+                    Console.WriteLine(Msg);
+                }
+            }
+
+            GC.SuppressFinalize(LogLock);
+        }
+
         internal static string Filter(string Msg)
         {
             string SafeMsg = Msg.Replace("<", "&lt;").Replace(">", "&gt;");
