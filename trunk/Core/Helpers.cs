@@ -43,6 +43,18 @@ namespace JabboServer.Core
             GC.SuppressFinalize(LogLock);
         }
 
+        internal static void Clear()
+        {
+            LogLock = new Object();
+
+            lock (LogLock)
+            {
+                Console.Clear();
+            }
+
+            GC.SuppressFinalize(LogLock);
+        }
+
         internal static string Filter(string Msg)
         {
             string SafeMsg = Msg.Replace("<", "&lt;").Replace(">", "&gt;");

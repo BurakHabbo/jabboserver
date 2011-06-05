@@ -27,6 +27,10 @@ namespace JabboServer.Core
                 case "savechatlogs":
                     Engine.GetRoomManager().GetChatlogManager().Save();
                     break;
+
+                case "clear":
+                    Helpers.Clear();
+                    break;
             }
         }
     }
