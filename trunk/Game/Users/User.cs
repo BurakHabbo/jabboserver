@@ -22,7 +22,7 @@ namespace JabboServer.Game.Users
 
         private uint RoomId = 0;
 
-        internal Room Room;
+        private Room Room;
         internal int Rank = 1;
 
         private Coord Coordinate = new Coord(-1, -1);
@@ -49,6 +49,11 @@ namespace JabboServer.Game.Users
             {
                 return (Room != null);
             }
+        }
+
+        internal Room GetRoom()
+        {
+            return Room;
         }
 
         internal WebConnection GetConnection()

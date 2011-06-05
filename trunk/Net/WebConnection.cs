@@ -185,7 +185,7 @@ namespace JabboServer.Net
             {
                 if (User.InRoom)
                 {
-                    User.Room.LeaveRoom(User);
+                    User.GetRoom().LeaveRoom(User);
                 }
             }
 
