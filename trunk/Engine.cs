@@ -25,7 +25,12 @@ namespace JabboServer
 
         internal static void Initialize()
         {
-            Helpers.WriteLine("Credits to wichard for recoding the whole JabboServer!");
+            Helpers.WriteLine("Credits to:", false);
+            Helpers.WriteLine("- PEjump2 for coding the base.", false);
+            Helpers.WriteLine("- joopie for coding the base of the Packet structure.", false);
+            Helpers.WriteLine("- TopErwin with helping to fix exploits and coding some functions.", false);
+            Helpers.WriteLine("- wichard for recoding the whole JabboServer.", false);
+            Helpers.WriteLine(Environment.NewLine, false);
 
             Config = new Config();
             Config.Initialize();
