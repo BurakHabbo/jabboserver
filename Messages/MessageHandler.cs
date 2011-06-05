@@ -28,6 +28,11 @@ namespace JabboServer.Messages
 
         internal MessageHandler(WebConnection Connection)
         {
+            if (Connection == null)
+            {
+                return;
+            }
+
             this.Connection = Connection;
             this.Invokers = new Dictionary<string, Invoker>();
 
@@ -39,7 +44,7 @@ namespace JabboServer.Messages
 
         internal void Invoke(Request Req)
         {
-            if (Req.GetMessageId == "" || Req.GetMessageId == null)
+            if (Req == null || Req.GetMessageId == "" || Req.GetMessageId == null)
             {
                 return;
             }
