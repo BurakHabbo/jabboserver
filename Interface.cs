@@ -14,6 +14,7 @@ namespace JabboServer
         private bool IsStarted = false;
 
         private delegate void textLogger(string Text);
+        private delegate void titleUpdater(string Title);
 
         internal Interface()
         {
@@ -54,6 +55,15 @@ namespace JabboServer
         }
 
         public void SetTitle(string Title)
+        {
+            if (Visible)
+            {
+                titleUpdater Log = new titleUpdater(UpdateTitle);
+                this.Invoke(Log, new object[] { Title });
+            }
+        }
+
+        public void UpdateTitle(string Title)
         {
             this.Text = Title;
         }
