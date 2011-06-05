@@ -84,6 +84,16 @@ namespace JabboServer
             }
         }
 
+        private void logBox_MouseHover(object sender, EventArgs e)
+        {
+            this.logBox.BackColor = System.Drawing.Color.White;
+        }
+
+        private void logBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.logBox.BackColor = System.Drawing.SystemColors.Control;
+        }
+
         private void startButton_MouseHover(object sender, EventArgs e)
         {
             Image pic = (Image)JabboServer.Properties.Resources.startButton_hover;
