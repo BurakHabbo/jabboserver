@@ -53,7 +53,7 @@ namespace JabboServer
 
         internal static void UpdateTitle()
         {
-            //Console.Title = GetConsoleTitle;
+            Interface.SetTitle(GetConsoleTitle);
         }
 
         internal static void Dispose()
