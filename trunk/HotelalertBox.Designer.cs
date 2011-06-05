@@ -75,7 +75,7 @@
             this.MinimizeBox = false;
             this.Name = "HotelalertBox";
             this.Opacity = 0.9D;
-            this.Text = "JabboServer [C#] Hotelalert Box";
+            this.Text = "JabboServer [C#] - Hotelalert Box";
             this.ResumeLayout(false);
             this.PerformLayout();
 
