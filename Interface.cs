@@ -86,6 +86,34 @@ namespace JabboServer
             }
         }
 
+        private void logoImage_MouseLeave(object sender, EventArgs e)
+        {
+            Image pic = (Image)JabboServer.Properties.Resources.Logo_default;
+
+            this.logoImage.BackgroundImage = (Image)pic;
+        }
+
+        private void logoImage_MouseHover(object sender, EventArgs e)
+        {
+            Image pic = (Image)JabboServer.Properties.Resources.Logo_hover;
+
+            this.logoImage.BackgroundImage = (Image)pic;
+        }
+
+        private void logoImage_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show
+                (
+                "Server for the JavaScript Habbo Environment\n" +
+                "Platform: C#.NET 4.0\n" +
+                "Written by PEjump2, wichard & joopie\n" +
+                "Copyright (C) 2011\n\n",
+                "About JabboServer",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+                );
+        }
+
         private void logBox_MouseHover(object sender, EventArgs e)
         {
             this.logBox.BackColor = System.Drawing.Color.White;
@@ -108,21 +136,6 @@ namespace JabboServer
             Image pic = (Image)JabboServer.Properties.Resources.startButton_default;
 
             this.startButton.BackgroundImage = (Image)pic;
-        }
-
-        private void informationButton_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show
-                (
-                "Server for the JavaScript Habbo Environment\n" +
-                "Platform: C#.NET 4.0\n" +
-                "Written by PEjump2, wichard & joopie\n" +
-                "Copyright (C) 2011\n\n" +
-                "",
-                "About JabboServer",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-                );
         }
 
         private void hotelalertButton_Click(object sender, EventArgs e)
