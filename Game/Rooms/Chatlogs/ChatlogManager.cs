@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 using JabboServer.Core;
 
@@ -33,7 +34,7 @@ namespace JabboServer.Game.Rooms.Chatlogs
                     LogData += Environment.NewLine;
                 }
 
-                Helpers.LogToFile("Logs\\chatlog.txt", LogData);
+                Helpers.LogToFile(Application.StartupPath + "\\Logs\\chatlog.txt", LogData);
             }
 
             ChatMessages.Clear();
