@@ -1,6 +1,6 @@
-﻿namespace JabboServer
+﻿namespace JabboServer.Forms
 {
-    partial class HotelalertBox
+    partial class wndHotelalert
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotelalertBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(wndHotelalert));
             this.inputBox = new System.Windows.Forms.TextBox();
             this.sendButton = new System.Windows.Forms.Button();
             this.SuspendLayout();

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using JabboServer.Forms;
+
 namespace JabboServer
 {
     public partial class Interface : Form
@@ -127,7 +129,7 @@ namespace JabboServer
         {
             if (IsStarted)
             {
-                HotelalertBox HotelalertBox = new HotelalertBox();
+                wndHotelalert HotelalertBox = new wndHotelalert();
 
                 HotelalertBox.ShowDialog(this);
             }
