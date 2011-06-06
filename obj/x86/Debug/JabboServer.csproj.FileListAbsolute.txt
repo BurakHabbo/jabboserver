@@ -10,4 +10,4 @@ D:\JabboServer\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\JabboServer\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\JabboServer\obj\x86\Debug\JabboServer.exe
 D:\JabboServer\obj\x86\Debug\JabboServer.pdb
-D:\JabboServer\obj\x86\Debug\JabboServer.HotelalertBox.resources
+D:\JabboServer\obj\x86\Debug\JabboServer.Forms.wndHotelalert.resources

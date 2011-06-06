@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace JabboServer
+namespace JabboServer.Forms
 {
-    public partial class HotelalertBox : Form
+    public partial class wndHotelalert : Form
     {
-        public HotelalertBox()
+        public wndHotelalert()
         {
             InitializeComponent();
         }
