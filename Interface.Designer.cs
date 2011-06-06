@@ -62,8 +62,6 @@
             this.logBox.ReadOnly = true;
             this.logBox.Size = new System.Drawing.Size(350, 301);
             this.logBox.TabIndex = 5;
-            this.logBox.MouseLeave += new System.EventHandler(this.logBox_MouseLeave);
-            this.logBox.MouseHover += new System.EventHandler(this.logBox_MouseHover);
             // 
             // hotelalertButton
             // 
