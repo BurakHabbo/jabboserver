@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace JabboServer.Messages
+namespace JabboServer.Messages.WebSocket
 {
     class Request
     {

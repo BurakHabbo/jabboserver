@@ -7,9 +7,9 @@ using System.Net;
 using System.Net.Sockets;
 
 using JabboServer.Core;
-using JabboServer.Messages;
+using JabboServer.Messages.WebSocket;
 
-namespace JabboServer.Net
+namespace JabboServer.Net.WebSocket
 {
     class WebSocket
     {

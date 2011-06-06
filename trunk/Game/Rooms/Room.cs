@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using JabboServer.Net;
-using JabboServer.Messages;
+using JabboServer.Net.WebSocket;
+using JabboServer.Messages.WebSocket;
 using JabboServer.Game.Users;
 
 namespace JabboServer.Game.Rooms

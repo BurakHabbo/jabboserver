@@ -5,12 +5,12 @@ using System.Text;
 using System.Net.Sockets;
 
 using JabboServer.Core;
-using JabboServer.Messages;
+using JabboServer.Messages.WebSocket;
 using JabboServer.Game;
 using JabboServer.Game.Users;
 using JabboServer.Util;
 
-namespace JabboServer.Net
+namespace JabboServer.Net.WebSocket
 {
     class WebConnection
     {

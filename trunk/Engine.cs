@@ -9,8 +9,8 @@ using JabboServer.Game;
 using JabboServer.Game.Users;
 using JabboServer.Game.Rooms;
 using JabboServer.Game.Rooms.Chatlogs;
-using JabboServer.Net;
-using JabboServer.Messages;
+using JabboServer.Net.WebSocket;
+using JabboServer.Messages.WebSocket;
 
 namespace JabboServer
 {
