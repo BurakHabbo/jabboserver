@@ -60,23 +60,30 @@ namespace JabboServer.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap bg {
+        internal static System.Drawing.Bitmap Background {
             get {
-                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                object obj = ResourceManager.GetObject("Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap InterfacePanel {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("InterfacePanel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap panel {
+        internal static System.Drawing.Bitmap Logo_default {
             get {
-                object obj = ResourceManager.GetObject("panel", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Logo_hover {
+            get {
+                object obj = ResourceManager.GetObject("Logo_hover", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

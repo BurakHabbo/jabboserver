@@ -96,6 +96,10 @@
     <Content Include="Logs\errorlog.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\Background.png" />
+    <None Include="Resources\Logo_hover.gif" />
+    <None Include="Resources\Logo_default.gif" />
+    <None Include="Resources\InterfacePanel.png" />
     <None Include="Resources\startButton_hover.gif" />
     <None Include="Resources\startButton_default.gif" />
     <None Include="Resources\panel.png" />
