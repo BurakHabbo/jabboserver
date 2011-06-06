@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\CommandParser.cs" />
     <Compile Include="Core\Config.cs" />
     <Compile Include="Core\Helpers.cs" />
     <Compile Include="Game\Misc\ChatCommandHandler.cs" />
@@ -102,9 +101,6 @@
     <None Include="Resources\InterfacePanel.png" />
     <None Include="Resources\startButton_hover.gif" />
     <None Include="Resources\startButton_default.gif" />
-    <None Include="Resources\panel.png" />
-    <None Include="Resources\logo.gif" />
-    <None Include="Resources\bg.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\wndHotelalert.resx">

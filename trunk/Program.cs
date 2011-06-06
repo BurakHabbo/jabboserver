@@ -15,7 +15,7 @@ namespace JabboServer
 
         internal static void Main()
         {
-            //AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
 
             try
             {
@@ -23,21 +23,12 @@ namespace JabboServer
                 Application.SetCompatibleTextRenderingDefault(false);
 
                 Interface = new Interface();
-                //Interface.Show();
 
                 Application.Run(Interface);
-                //Engine.Initialize();
-
-                //Console.ReadKey(true);
-
-                /*while (true)
-                {
-                    CommandParser.Parse(Console.ReadLine());
-                }*/
             }
             catch (Exception e)
             {
-                Helpers.LogToFile("Logs\\errorlog.txt", e.ToString());
+                Helpers.LogToFile(Application.StartupPath + "\\Logs\\errorlog.txt", e.ToString());
             }
         }
 
@@ -45,10 +36,8 @@ namespace JabboServer
         {
             string Error = args.ExceptionObject.ToString();
 
-            Helpers.LogToFile("Logs\\errorlog.txt", Error);
+            Helpers.LogToFile(Application.StartupPath + "\\Logs\\errorlog.txt", Error);
             Helpers.WriteLine(Error);
-
-            Console.ReadKey(true);
         }
     }
 }
