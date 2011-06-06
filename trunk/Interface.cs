@@ -70,36 +70,6 @@ namespace JabboServer
             this.Text = Title;
         }
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            if (!IsStarted)
-            {
-                IsStarted = true;
-
-                Engine.Initialize(this);
-
-                startButton.Text = "Exit";
-            }
-            else
-            {
-                Engine.Dispose();
-            }
-        }
-
-        private void logoImage_MouseLeave(object sender, EventArgs e)
-        {
-            Image pic = (Image)JabboServer.Properties.Resources.Logo_default;
-
-            this.logoImage.BackgroundImage = (Image)pic;
-        }
-
-        private void logoImage_MouseHover(object sender, EventArgs e)
-        {
-            Image pic = (Image)JabboServer.Properties.Resources.Logo_hover;
-
-            this.logoImage.BackgroundImage = (Image)pic;
-        }
-
         private void logoImage_Click(object sender, EventArgs e)
         {
             MessageBox.Show
@@ -114,14 +84,34 @@ namespace JabboServer
                 );
         }
 
-        private void logBox_MouseHover(object sender, EventArgs e)
+        private void logoImage_MouseHover(object sender, EventArgs e)
         {
-            this.logBox.BackColor = System.Drawing.Color.White;
+            Image pic = (Image)JabboServer.Properties.Resources.Logo_hover;
+
+            this.logoImage.BackgroundImage = (Image)pic;
         }
 
-        private void logBox_MouseLeave(object sender, EventArgs e)
+        private void logoImage_MouseLeave(object sender, EventArgs e)
         {
-            this.logBox.BackColor = System.Drawing.SystemColors.Control;
+            Image pic = (Image)JabboServer.Properties.Resources.Logo_default;
+
+            this.logoImage.BackgroundImage = (Image)pic;
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            if (!IsStarted)
+            {
+                IsStarted = true;
+
+                Engine.Initialize(this);
+
+                startButton.Text = "Exit";
+            }
+            else
+            {
+                Engine.Dispose();
+            }
         }
 
         private void startButton_MouseHover(object sender, EventArgs e)
