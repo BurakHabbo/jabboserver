@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 
 using JabboServer.Core;
-using JabboServer.Net;
+using JabboServer.Net.WebSocket;
 using JabboServer.Game.Users;
 using JabboServer.Game.Rooms;
 using JabboServer.Game.Rooms.Pathfinding;
 
-namespace JabboServer.Messages
+namespace JabboServer.Messages.WebSocket
 {
     partial class MessageHandler
     {

@@ -6,7 +6,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 
-namespace JabboServer.Net
+namespace JabboServer.Net.WebSocket
 {
     public class HandShake
     {
