@@ -24,9 +24,9 @@ namespace JabboServer
         private static RoomManager RoomManager;
         private static string WelcomeMessage = "";
 
-        internal static void Initialize(Interface i)
+        internal static void Initialize(Interface GUI)
         {
-            Interface = i;
+            Interface = GUI;
 
             Helpers.WriteLine("Credits to:", false);
             Helpers.WriteLine("- PEjump2 for coding the base.", false);
