@@ -6,8 +6,15 @@ using System.Text;
 
 namespace JabboServer.Core
 {
-    internal class Helpers
+    class Helpers
     {
+        internal static string Filter(string Msg)
+        {
+            string SafeMsg = Msg.Replace("<", "&lt;").Replace(">", "&gt;");
+
+            return SafeMsg;
+        }
+
         internal static void WriteLine(string Msg)
         {
             DateTime Time = DateTime.Now;
@@ -29,18 +36,6 @@ namespace JabboServer.Core
             }
         }
 
-        internal static void Clear()
-        {
-            Engine.GetInterface().Clear();
-        }
-
-        internal static string Filter(string Msg)
-        {
-            string SafeMsg = Msg.Replace("<", "&lt;").Replace(">", "&gt;");
-
-            return SafeMsg;
-        }
-
         internal static void LogToFile(string filePath, string Data)
         {
             StreamWriter Log;
@@ -58,6 +53,25 @@ namespace JabboServer.Core
 
             Log.Dispose();
             Log.Close();
+        }
+
+        internal static string GetContentsFromFile(string filePath)
+        {
+            StreamReader sReader;
+
+            if (File.Exists(filePath))
+            {
+                sReader = new StreamReader(filePath);
+            }
+            else
+            {
+                return null;
+            }
+
+            return sReader.ReadToEnd();
+
+            sReader.Dispose();
+            sReader.Close();
         }
     }
 }
