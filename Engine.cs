@@ -68,18 +68,26 @@ namespace JabboServer
 
         internal static void Dispose()
         {
-            Config = null;
-            Helpers.WriteLine("Destroyed Config.");
+            if (Config != null)
+            {
+                Config = null;
+                Helpers.WriteLine("Destroyed Config.");
+            }
 
-            WebSocket.Dispose();
-            WebSocket = null;
-            Helpers.WriteLine("Destroyed WebSocket.");
+            if (WebSocket != null)
+            {
+                WebSocket.Dispose();
+                WebSocket = null;
+                Helpers.WriteLine("Destroyed WebSocket.");
+            }
 
-            RoomManager.GetChatlogManager().Save();
-
-            RoomManager.Dispose();
-            RoomManager = null;
-            Helpers.WriteLine("Destroyed RoomManager.");
+            if (RoomManager != null)
+            {
+                RoomManager.GetChatlogManager().Save();
+                RoomManager.Dispose();
+                RoomManager = null;
+                Helpers.WriteLine("Destroyed RoomManager.");
+            }
 
             Environment.Exit(0);
         }
