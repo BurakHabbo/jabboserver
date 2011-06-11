@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
+using JabboServer.Updater;
 using JabboServer.Core;
 using JabboServer.Game;
 using JabboServer.Game.Users;
@@ -28,10 +29,19 @@ namespace JabboServer
         {
             Interface = GUI;
 
+            if (UpdateChecker.NeedsUpdate())
+            {
+                Helpers.WriteLine("There is a update availible.", false);
+                Helpers.WriteLine("Please update the emulator through SVN,", false);
+                Helpers.WriteLine("Or you won't be able to use JabboServer", false);
+
+                return;
+            }
+
             Helpers.WriteLine("Credits to:", false);
-            Helpers.WriteLine("- PEjump2 for coding the base.", false);
-            Helpers.WriteLine("- joopie for coding the base of the Packet structure.", false);
-            Helpers.WriteLine("- TopErwin with helping to fix exploits.", false);
+            Helpers.WriteLine("- PEjump2 for coding 'the base' and GUI.", false);
+            Helpers.WriteLine("- joopie for coding 'the base' of the Packet structure.", false);
+            Helpers.WriteLine("- TopErwin for fixing exploits.", false);
             Helpers.WriteLine("- wichard for recoding the whole JabboServer.", false);
             Helpers.WriteLine(Environment.NewLine, false);
 

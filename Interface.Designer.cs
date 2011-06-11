@@ -62,6 +62,7 @@
             this.logBox.ReadOnly = true;
             this.logBox.Size = new System.Drawing.Size(350, 301);
             this.logBox.TabIndex = 5;
+            this.logBox.TextChanged += new System.EventHandler(this.logBox_TextChanged);
             // 
             // hotelalertButton
             // 

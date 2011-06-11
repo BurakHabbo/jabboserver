@@ -81,10 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Updater\UpdateChecker.cs" />
     <Compile Include="Util\ByteUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\config.ini">
+    <None Include="Core\Config\config.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

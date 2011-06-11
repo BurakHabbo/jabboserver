@@ -70,6 +70,15 @@ namespace JabboServer
             this.Text = Title;
         }
 
+        private void logBox_TextChanged(object sender, EventArgs e)
+        {
+            if (logBox.Text.Length >= 5000)
+            {
+                Clear();
+                WriteLine("Text cleared succesfully.");
+            }
+        }
+
         private void logoImage_Click(object sender, EventArgs e)
         {
             MessageBox.Show
