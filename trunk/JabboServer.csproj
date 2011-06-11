@@ -85,17 +85,6 @@
     <Compile Include="Util\ByteUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\config.ini">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Logs\chatlog.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Logs\errorlog.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\Background.png" />
     <None Include="Resources\Logo_hover.gif" />
     <None Include="Resources\Logo_default.gif" />

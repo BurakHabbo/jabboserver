@@ -1,6 +1,3 @@
-D:\JabboServer\bin\Debug\Logs\chatlog.txt
-D:\JabboServer\bin\Debug\Logs\errorlog.txt
-D:\JabboServer\bin\Debug\Config\config.ini
 D:\JabboServer\bin\Debug\JabboServer.exe
 D:\JabboServer\bin\Debug\JabboServer.pdb
 D:\JabboServer\obj\x86\Debug\ResolveAssemblyReference.cache
