@@ -1,6 +1,9 @@
-﻿System.NullReferenceException: Object reference not set to an instance of an object.
-   at JabboServer.Engine.Dispose() in D:\JabboServer\Engine.cs:line 74
-   at JabboServer.Interface.startButton_Click(Object sender, EventArgs e) in D:\JabboServer\Interface.cs:line 122
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at JabboServer.Engine.Initialize(Interface GUI) in D:\JabboServer\Engine.cs:line 53
+   at JabboServer.Interface.startButton_Click(Object sender, EventArgs e) in D:\JabboServer\Interface.cs:line 116
    at System.Windows.Forms.Control.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnClick(EventArgs e)
    at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
