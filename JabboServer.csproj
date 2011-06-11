@@ -85,7 +85,7 @@
     <Compile Include="Util\ByteUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Core\Config\config.ini">
+    <None Include="Config\config.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
